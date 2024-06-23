@@ -13,42 +13,41 @@ html {
 
 body {
   font-size: 2.4rem;
-  font-family: sans-serif;
-  color: #756AB6;  /* 756AB6*/
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif;
+  color: #756AB6;
   font-weight: 500;
 }
 
 .app {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
 }
 
 h1 {
   text-align: center;
-  background-color: #E0AED0; /*E0AED0 */
-  font-family: "Salsa";
-  font-size: 8rem;
+  background-color: #E0AED0;
+  font-family: "Salsa", cursive;
+  font-size: 6vw; /* 使用视窗宽度单位 */
   text-transform: uppercase; 
   font-weight: 400;
-  word-spacing: 30px;
-  letter-spacing: -5px;
+  word-spacing: 2vw;
+  letter-spacing: -0.3vw;
   padding: 2.4rem 0;
 }
+
 h4 {
   text-align: center;
-  background-color: #E0AED0; /*E0AED0 */
-
-
-
+  background-color: #E0AED0;
+  font-size: 3vw; /* 使用视窗宽度单位 */
 }
 
 .add-form {
-  background-color: #AC87C5;/*AC87C5*/
+  background-color: #AC87C5;
   padding: 2.8rem 0;
   display: flex;
+  flex-wrap: wrap; /* 允许元素换行 */
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
@@ -62,7 +61,7 @@ h3 {
 button,
 select,
 input {
-  background-color: #ffebb3; /* FFE5E5*/
+  background-color: #ffebb3;
   color: #756AB6;
   font-family: inherit;
   border: none;
@@ -82,7 +81,6 @@ input {
   background-color: #756AB6;
   color: #ffebb3;
   padding: 4rem 0;
-
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -101,11 +99,11 @@ input {
 
 .list ul {
   list-style: none;
-  width: 80%;
-  overflow: scroll;
-
+  width: 90%; /* 增加宽度以适应更多的内容 */
+  max-height: 60vh; /* 限制最大高度 */
+  overflow-y: auto; /* 垂直滚动 */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 调整最小宽度 */
   gap: 1.2rem;
   justify-content: center;
   align-content: start;
@@ -115,6 +113,9 @@ input {
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  padding: 1rem; /* 添加内边距 */
+  background-color: rgba(255, 255, 255, 0.1); /* 添加背景色以区分项目 */
+  border-radius: 0.5rem; /* 圆角 */
 }
 
 input[type="checkbox"] {
@@ -137,4 +138,39 @@ input[type="checkbox"] {
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
+}
+
+/* 媒体查询，用于小屏幕设备 */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%; /* 减小基础字体大小 */
+  }
+
+  h1 {
+    font-size: 8vw; /* 增大标题字体大小 */
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+
+  .add-form {
+    flex-direction: column; /* 垂直排列表单元素 */
+    align-items: stretch;
+  }
+
+  .add-form button,
+  .add-form select,
+  .add-form input {
+    width: 90%; /* 使表单元素占据更多宽度 */
+    margin: 0.5rem 0;
+  }
+
+  .list ul {
+    grid-template-columns: 1fr; /* 单列布局 */
+  }
+
+  .actions button,
+  .list select {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
 }
