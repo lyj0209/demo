@@ -60,19 +60,21 @@ h1 {
 h4 {
   text-align: center;
   background-color: #E0AED0;
-  color:#ab6e9d;
+  color:#fbe3f6;
   font-size: 3vw; /* 使用视窗宽度单位 */
   font-family: "Averia Libre", system-ui;
 
 }
 
 .actions {
-  padding: 2.8rem 0;
+  padding: 1rem 0;
   display: flex;
   flex-wrap: wrap; /* 允许元素换行 */
   align-items: center;
+  gap:2rem;
   justify-content: center;
-  gap: 0.8rem;
+  position: relative;
+  bottom: -2rem;
 
 }
 .add-form {
@@ -133,7 +135,7 @@ input {
   max-height: 60vh;
   overflow-y: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.2rem;
   justify-content: center;
   align-content: start;
@@ -199,7 +201,7 @@ input[type="checkbox"] {
   color:#d9c8d6;
   text-align: center;
   font-weight: 700;
-  padding: 3.2rem 0;
+  padding: 1rem 0;
 }
 
 /* 媒体查询，用于小屏幕设备 */
