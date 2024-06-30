@@ -46,6 +46,7 @@ body {
 h1 {
   text-align: center;
   background-color: #E0AED0;
+  color:#fbe3f6;
   font-family: "Labrada", serif;
   font-size: 6vw; /* 使用视窗宽度单位 */
   text-transform: uppercase; 
@@ -59,6 +60,7 @@ h1 {
 h4 {
   text-align: center;
   background-color: #E0AED0;
+  color:#ab6e9d;
   font-size: 3vw; /* 使用视窗宽度单位 */
   font-family: "Averia Libre", system-ui;
 
